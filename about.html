@@ -61,8 +61,8 @@
         
         .back-button {
             position: absolute;
-            left: 40px;
-            top: 40px;
+            left: 5%;
+            top: 5%;
             color: white;
             font-size: 1.5vw;
             font-family: 'Inter', sans-serif;
@@ -78,7 +78,7 @@
         
         .start-button {
             position: absolute;
-            right: 40px;
+            right: 5%;
             bottom: 40px;
             color: #818181;
             font-size: 2vw;
@@ -92,6 +92,18 @@
         
         .start-button:hover {
             color: white;
+        }
+        
+        .credits {
+            position: absolute;
+            left: 5%;
+            bottom: 5%;
+            color: #818181;
+            font-size: 0.9vw;
+            font-family: 'Inter', sans-serif;
+            font-weight: 300;
+            max-width: 100%;
+            z-index: 10;
         }
         
         @media (max-width: 1400px) {
@@ -127,6 +139,13 @@
                 right: 20px;
                 bottom: 20px;
             }
+            
+            .credits {
+                font-size: 12px;
+                bottom: 20px;
+                left: 20px;
+                max-width: 60%;
+            }
         }
     </style>
 </head>
@@ -145,6 +164,10 @@
         L'utilisateur peut également animer son avatar, renforçant ainsi la dimension vivante et expressive de cette créature digitale. Cette démarche soulève des questions centrales dans l'art numérique : qu'est-ce qu'un avatar ? Peut-il vraiment refléter une identité personnelle, même lorsqu'il s'éloigne radicalement de la figure humaine ?<br/><br/>
         
         Inspiré par des œuvres comme Bodies INC de Victoria Vesna, où l'on personnalise un corps virtuel à l'aide de textures, ou encore par l'univers énigmatique de Giorgio De Chirico, avec ses figures construites d'objets incongrus, Homunculus Lab pousse la logique de personnalisation vers une esthétique surréaliste. Chaque choix d'objet devient un acte d'expression personnelle, une manière détournée mais puissante de parler de soi.</p>
+    </div>
+    
+    <div class="credits">
+        Ce projet a été réalisé par Malcolm Semedo Barreto, dans le cadre du concours Bachelor Media and Interaction Design 2025, à l'ECAL
     </div>
     
     <a href="application.html" class="start-button">Commencer à éditer</a>
