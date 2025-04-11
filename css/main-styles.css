@@ -99,7 +99,7 @@
 .panel-value {
   text-align: right;
   white-space: nowrap;
-  color: rgba(255, 255, 255, 1);
+  color: rgba(128, 128, 128, 1); /* Changed from white to gray */
   font-weight: bold;
   min-width: 60px;
 }
@@ -110,7 +110,7 @@
 }
 
 .clickable-value:hover {
-  color: #ffffff;
+  color: #ffffff; /* Already white on hover */
   text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
 }
 
@@ -141,6 +141,7 @@
   margin-left: 35px; /* Add space to the left of the texture name */
   width: 100%; /* Allow the texture name to use full width */
   font-weight: bold; /* Make the texture name bold */
+  color: rgba(128, 128, 128, 1); /* Changed from white to gray */
 }
 
 /* Special styling just for type number (div1 class) */
@@ -151,6 +152,7 @@
   margin-left: 0; /* Add space to the left of the type number */
   width: 100%; /* Allow the type number to use full width */
   font-weight: bold; /* Make the type number bold */
+  color: rgba(128, 128, 128, 1); /* Changed from white to gray */
 }
 
 /* Start Menu Styles */
@@ -433,4 +435,17 @@
 
 .simple-export-button:hover {
   color: #FFFFFF;
+}
+
+/* Styling for reset view and randomize options panels */
+.reset-view-panel .panel-option,
+.random-options-panel .panel-option {
+  color: rgba(128, 128, 128, 1); /* Gray by default */
+  transition: color 0.3s ease;
+}
+
+.reset-view-panel .panel-option:hover,
+.random-options-panel .panel-option:hover {
+  color: #ffffff; /* White on hover */
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
 }
