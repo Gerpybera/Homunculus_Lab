@@ -46,7 +46,7 @@
 .panel-value {
   text-align: left;
   white-space: nowrap;
-  color: rgba(255, 255, 255, 1);
+  color: rgba(128, 128, 128, 1); /* Changed from white to gray */
   font-weight: bold;
   width: 100%;
   padding: 4px 0;
@@ -59,7 +59,7 @@
 }
 
 .clickable-value:hover {
-  color: #ffffff;
+  color: #ffffff; /* Already white on hover */
   text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
 }
 
@@ -93,7 +93,7 @@
 
 /* Panel option styling */
 .panel-option {
-  color: rgba(255, 255, 255, 0.85);
+  color: rgba(128, 128, 128, 1); /* Changed from light white to gray */
   padding: 5px 0;
   cursor: pointer;
   transition: all 0.2s ease;
@@ -104,7 +104,11 @@
   text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
 }
 
-/* White text variant */
+/* White text variant - now starts as gray and turns white on hover */
 .white-text {
-  color: rgba(255, 255, 255, 1);
+  color: rgba(128, 128, 128, 1); /* Changed from white to gray */
+}
+
+.white-text:hover {
+  color: #ffffff;
 }
