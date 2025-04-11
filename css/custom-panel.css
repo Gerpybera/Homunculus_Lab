@@ -28,6 +28,11 @@
   font-size: 4vw; /* Maintain consistent text height */
   cursor: pointer;
   width: 200px;
+  color: rgba(128, 128, 128, 1); /* Changed from white to gray */
+}
+
+.div:hover {
+  color: #ffffff; /* Change to white on hover */
 }
 
 .div1 {
@@ -37,6 +42,11 @@
   font-weight: 300;
   font-size: 4vw;
   cursor: pointer;
+  color: rgba(128, 128, 128, 1); /* Changed from white to gray */
+}
+
+.div1:hover {
+  color: #ffffff; /* Change to white on hover */
 }
 
 .type {
