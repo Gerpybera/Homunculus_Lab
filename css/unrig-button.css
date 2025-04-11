@@ -1,0 +1,25 @@
+/* Styling for the unrig button */
+.unrig-button {
+  position: fixed;
+  bottom: 5%; /* This value should now be respected */
+  left: 5%;
+  background-color: transparent;
+  color: #3F3F3F;
+  font-family: 'Inter', sans-serif;
+  font-size: 5vw; /* Adjusted font size for better visibility */
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  cursor: pointer;
+  transition: color 0.3s ease, opacity 0.3s ease;
+  z-index: 100;
+  text-align: left;
+  user-select: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.unrig-button:hover {
+  color: #FFFFFF;
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="globals.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="text-menu.css" />
+    <style>
+      body {
+        background-color: black;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+      }
+      
+      #background-video {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        z-index: -100;
+        object-fit: cover;
+      }
+      
+      #start-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 100;
+      }
+      
+      .property-group {
+        cursor: pointer;
+        margin-top: 250px;
+      }
+      
+      .label {
+        margin-bottom: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <video id="background-video" autoplay muted loop playsinline>
+      <!-- You'll need to add your video source here -->
+      <source src="../asset/animation/background.mp4" type="video/mp4">
+    </video>
+    
+    <div id="start-container">
+      <div id="mainTitle" class="label">
+        <div class="text-wrapper">Homunculus Lab</div>
+      </div>
+      <div id="startMenu" class="start-menu">
+        <div id="startButton" class="property-group">
+          <div class="text-wrapper">CLIQUEZ POUR COMMENCER</div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- The main JavaScript will be loaded by the HTML that includes this as an iframe -->
+  </body>
+</html>

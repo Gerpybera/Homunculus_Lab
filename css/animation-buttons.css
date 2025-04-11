@@ -1,0 +1,77 @@
+.circular-button {
+  border-radius: 130px;
+  border: 3px solid #FFF;
+  background: rgba(255, 255, 255, 0.00);
+  color: #FFF;
+  font-family: 'Inter', sans-serif;
+  font-size: 3.5vw;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  padding: 12px 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 120px;
+  display: inline-block;
+  text-align: center;
+  box-sizing: border-box;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  white-space: nowrap;
+}
+
+.circular-button:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.05);
+}
+
+.animation-active {
+  background: rgba(255, 255, 255, 0.3);
+  border-color: #FFF;
+  box-shadow: 0 0 20px rgba(255,255,255,0.4);
+}
+
+.stop-button {
+  background: rgba(255, 50, 50, 0.1);
+  border-color: #ff5050;
+  color: #ff5050;
+  font-size: 3.5vw; /* Slightly smaller text for the stop button */
+}
+
+.stop-button:hover {
+  background: rgba(255, 50, 50, 0.2);
+}
+
+/* For larger screens */
+@media (min-width: 1200px) {
+  .circular-button {
+    font-size: 48px;
+    padding: 15px 35px;
+  }
+  .stop-button {
+    font-size: 48px;
+  }
+}
+
+/* For medium screens */
+@media (max-width: 1199px) and (min-width: 768px) {
+  .circular-button {
+    font-size: 36px;
+    padding: 12px 30px;
+  }
+  .stop-button {
+    font-size: 36px;
+  }
+}
+
+/* For smaller screens */
+@media (max-width: 767px) {
+  .circular-button {
+    font-size: 24px;
+    padding: 8px 20px;
+    min-width: 90px;
+    right: 10px !important;
+  }
+  .stop-button {
+    font-size: 24px;
+  }
+}

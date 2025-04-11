@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homunculus Lab - Application</title>
+    <link rel="stylesheet" href="./css/main-styles.css">
+    <link rel="stylesheet" href="./figma component/text-menu.css">
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background-color: #1a1a1a; /* Match the scene background color */
+            font-family: Arial, sans-serif;
+        }
+        
+        canvas {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .loading-message {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 24px;
+            text-align: center;
+            font-family: 'Inter', sans-serif;
+        }
+        
+        /* About button styling */
+        #about-button {
+            position: fixed;
+            top: 10%;
+            left: 10%;
+            z-index: 1001;
+            font-family: inherit;
+            background: none;
+            border: none;
+            color: #3F3F3F;
+            font-size: 64px;
+            cursor: pointer;
+            opacity: 0.8;
+            transition: color 0.3s ease;
+            text-decoration: none; /* Remove underline from link */
+            direction: ltr; /* Ensure left-to-right text direction */
+            text-align: left; /* Ensure text is aligned left */
+            white-space: nowrap; /* Keep text on one line */
+        }
+        
+        #about-button .text-wrapper {
+            display: inline-block; /* Display as inline block */
+            direction: ltr; /* Ensure left-to-right text direction */
+            font-size: 3.5vw; /* Added explicit font size to text-wrapper */
+            font-weight: lighter; /* Making the font weight lighter */
+            letter-spacing: 1px; /* Adding letter spacing */
+            color: #3F3F3F; /* Set initial color */
+            transition: color 0.3s ease; /* Add smooth transition */
+        }
+        
+        #about-button:hover .text-wrapper {
+            color: white; /* Change color on hover */
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set up about button functionality
+            const aboutButton = document.getElementById('about-button');
+            
+            if (aboutButton) {
+                // Redirect to about page when about button is clicked
+                aboutButton.addEventListener('click', function() {
+                    window.location.href = 'about.html';
+                });
+            }
+        });
+    </script>
+</head>
+<body>
+    
+    <!-- About button with explicit left-to-right text -->
+    <a id="about-button" class="label" href="about.html" dir="ltr">
+        <div class="text-wrapper" dir="ltr">About</div>
+    </a>
+    
+    <!-- Scripts for Three.js application -->
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+                "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+            }
+        }
+    </script>
+    <script type="module">
+        // Initialize application when loaded
+        import * as App from './js/main_v2.js';
+        
+        // Remove loading message once canvas is created
+        const observer = new MutationObserver((mutations) => {
+            for (const mutation of mutations) {
+                for (const node of mutation.addedNodes) {
+                    if (node.tagName === 'CANVAS') {
+                        // Canvas added, remove loading message
+                        document.querySelector('.loading-message').style.display = 'none';
+                        observer.disconnect();
+                        break;
+                    }
+                }
+            }
+        });
+        
+        observer.observe(document.body, { childList: true });
+    </script>
+</body>
+</html>

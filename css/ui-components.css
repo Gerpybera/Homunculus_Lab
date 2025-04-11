@@ -1,0 +1,179 @@
+/* UI Components Styling for Mon_Homocule Project */
+
+/* Body part labels in 3D space */
+.body-part-label {
+    position: absolute;
+    padding: 8px 15px;
+    background-color: transparent; /* Changed from solid black to transparent */
+    color: rgb(255, 255, 255);
+    border: 1px solid #FFF;
+    border-radius: 100px;
+    cursor: pointer;
+    font-weight: normal; /* Changed from light to normal for better visibility */
+    font-family: 'Inter', sans-serif;
+    font-size: 1vw;
+    text-align: center;
+    z-index: 10;
+    pointer-events: auto;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transform: translate(-50%, -50%);
+    opacity: 1; /* Keeping fully opaque */
+}
+
+.body-part-label:hover:not(.selected-part) {
+    background-color: rgba(255, 255, 255, 0.1); /* Very light background on hover */
+    border-color: #FFF;
+    transform: scale(1.05) translate(-50%, -50%);
+}
+
+.selected-part {
+    background-color: #5D00FF; /* Changed to solid purple */
+    border: 3px solid #5D00FF; /* Changed to 3px solid purple */
+    border-radius: 110px; /* Changed to 110px for selected state */
+    color: #FFFFFF;
+    opacity: 1;
+    transform: scale(1.1) translate(-45%, -45%);
+    box-shadow: 0 0 15px rgba(93, 0, 255, 0.5); /* Purple glow */
+}
+
+/* Panel styles */
+.panel-base {
+    position: absolute;
+    z-index: 10;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    background-color: rgba(0, 0, 0, 0); /* debug */
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.customization-panel {
+    top: 50%;
+    left: 5%;
+    right: auto;
+    transform: translateY(-50%);
+    width: 650px;
+}
+
+.random-options-panel {
+    top: 50%;
+    right: 5%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    min-width: 300px;
+}
+
+.reset-view-panel {
+    bottom: 5%;
+    left: 5%;
+    right: auto;
+    top: auto;
+    transform: none;
+}
+
+/* Control panel (bottom) */
+.control-panel {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0);
+    border-radius: 10px;
+    z-index: 10;
+}
+
+/* Button styles */
+.button-base {
+    padding: 5% 15px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-family: "Geist Mono";
+}
+/* Text styles for panels */
+.panel-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 2vw;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.panel-option {
+    font-family: 'Inter', sans-serif;
+    font-size: 4vw;
+    font-weight: 300;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.panel-option:hover {
+    opacity: 0.7;
+}
+
+.purple-text {
+    color: #9b59b6;
+}
+
+.blue-text {
+    color: #3498db;
+}
+
+.orange-text {
+    color: #e67e22;
+}
+
+.white-text {
+    color: #ffffff;
+}
+
+
+/* Notifications */
+.notification {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: white;
+    z-index: 1000;
+}
+
+.notification-info {
+    background-color: rgba(0,123,255,0.9);
+}
+
+.notification-success {
+    background-color: rgba(40,167,69,0.9);
+}
+
+.notification-warning {
+    background-color: rgba(255,193,7,0.9);
+}
+
+.notification-error {
+    background-color: rgba(220,53,69,0.9);
+}
+
+/* Loading indicators */
+.loading-indicator {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    border-radius: 10px;
+    z-index: 1000;
+    font-family: 'Inter', sans-serif;
+}
