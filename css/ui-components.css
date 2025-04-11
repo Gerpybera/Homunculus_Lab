@@ -112,11 +112,13 @@
     font-size: 4vw;
     font-weight: 300;
     cursor: pointer;
-    transition: opacity 0.2s;
+    transition: opacity 0.2s, color 0.2s; /* Added color transition */
+    color: rgba(128, 128, 128, 1); /* Changed to gray */
 }
 
 .panel-option:hover {
-    opacity: 0.7;
+    opacity: 1; /* Changed from 0.7 to 1 */
+    color: #ffffff; /* Change to white on hover */
 }
 
 .purple-text {
@@ -132,9 +134,12 @@
 }
 
 .white-text {
-    color: #ffffff;
+    color: rgba(128, 128, 128, 1); /* Changed from white to gray */
 }
 
+.white-text:hover {
+    color: #ffffff;
+}
 
 /* Notifications */
 .notification {
