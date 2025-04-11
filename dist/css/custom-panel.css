@@ -1,0 +1,139 @@
+.texture-parent {
+  width: 150px; /* Increased from 300px to accommodate longer text */
+  position: relative;
+  background-color: rgba(0, 0, 0, 0); /* Transparent background */
+  padding: 15px;
+  height: 300px; /* Increased height to accommodate the random buttons */
+  overflow: visible; /* Changed from hidden to visible */
+  text-align: left;
+  font-size: 64px;
+  color: #ffffff;
+  font-family: "Geist Mono";
+  border-radius: 10px;
+}
+
+.texture {
+  position: absolute;
+  top: 174px;
+  left: 0px;
+  font-weight: 300;
+  font-size: 4vw;
+}
+
+.div {
+  position: absolute;
+  top: 174px;
+  left: 350px;
+  font-weight: 300;
+  font-size: 4vw; /* Maintain consistent text height */
+  cursor: pointer;
+  width: 200px;
+}
+
+.div1 {
+  position: absolute;
+  top: 87px;
+  left: 250px;
+  font-weight: 300;
+  font-size: 4vw;
+  cursor: pointer;
+}
+
+.type {
+  position: absolute;
+  top: 87px;
+  left: 0px;
+  font-weight: 300;
+  font-size: 4vw;
+}
+
+.random-type {
+  position: absolute;
+  top: 130px;
+  left: auto;
+  right: 0px;
+  font-weight: 300;
+  font-size: 4vw; /* Maintain consistent text height */
+  text-align: right; /* Keep text right-aligned */
+  cursor: pointer;
+  white-space: nowrap; /* Prevent line breaks */
+  overflow: visible; /* Allow text to extend beyond container */
+  text-align: right; /* Keep text right-aligned */
+  direction: ltr; /* Change to left-to-right text direction */
+}
+
+.random-texture {
+  position: absolute;
+  top: 217px;
+  left: auto;
+  right: 0px;
+  font-weight: 300;
+  font-size: 2.5wv;
+  cursor: pointer;
+  white-space: nowrap; /* Prevent line breaks */
+  overflow: visible; /* Allow text to extend beyond container */
+  text-align: right; /* Keep text right-aligned */
+  direction: ltr; /* Change to left-to-right text direction */
+}
+
+/* Add this class for the randomize both button to ensure consistent styling */
+.randomize-both {
+  position: absolute;
+  top: 304px; /* Position it below the random-texture button */
+  left: auto;
+  right: 0px;
+  font-weight: 300;
+  font-size: 2.5vw;
+  cursor: pointer;
+  white-space: nowrap;
+  overflow: visible;
+  text-align: right;
+}
+
+.tte {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  font-size: 2.5vw;
+  font-weight: bold;
+  white-space: nowrap; /* Prevent line breaks */
+  overflow: visible;
+}
+
+.texture-grid {
+  display: none;
+  position: absolute;
+  top: 280px; /* Adjusted position to appear below the random texture button */
+  left: 0;
+  width: 300px;
+  background: rgba(0, 0, 0, 0.9);
+  padding: 10px;
+  border-radius: 5px;
+  z-index: 11;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.texture-preview {
+  height: 60px;
+  border-radius: 5px;
+  cursor: pointer;
+  position: relative;
+}
+
+.texture-name {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 2px;
+  background-color: rgba(0,0,0,0.7);
+  font-size: 10px;
+  text-align: center;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.selected-texture {
+  border: 2px solid #ae00ff;
+}

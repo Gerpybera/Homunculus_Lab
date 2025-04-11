@@ -1,0 +1,19 @@
+/* Styles for canvas (to ensure proper stacking with HTML elements) */
+canvas {
+  position: fixed !important; /* Force fixed positioning */
+  top: 0 !important;
+  left: 0 !important;
+  z-index: 1 !important; /* Canvas should be above background video but below UI */
+  pointer-events: auto; /* Enable click events for the canvas */
+}
+
+/* Ensure video stays behind everything */
+#background-video {
+  z-index: 0 !important; /* Force lowest z-index */
+}
+
+/* Ensure menu container stays above everything */
+#start-container {
+  z-index: 1000 !important; /* Force highest z-index */
+  pointer-events: auto !important; /* Force pointer events to be active */
+}

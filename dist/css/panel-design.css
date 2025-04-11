@@ -1,0 +1,110 @@
+/* Base panel styling */
+.customization-panel {
+  background-color: rgba(30, 30, 30, 0.85);
+  border-radius: 8px;
+  padding: 12px 15px;
+  width: 110px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  left: 20px;
+  bottom: 20px;
+  transition: opacity 0.3s ease;
+  opacity: 0;
+  z-index: 100;
+}
+
+/* Values panel - positioned to the right of the main panel */
+.values-panel {
+  background-color: rgba(30, 30, 30, 0.85);
+  border-radius: 8px;
+  padding: 12px 15px;
+  width: 70px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  transition: opacity 0.3s ease;
+  opacity: 0;
+  z-index: 100;
+}
+
+/* Row layout for panel items */
+.panel-row {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+/* Panel labels styling */
+.panel-label {
+  text-align: left;
+  white-space: nowrap;
+  color: rgba(255, 255, 255, 0.85);
+  flex: 1;
+}
+
+/* Panel values styling */
+.panel-value {
+  text-align: left;
+  white-space: nowrap;
+  color: rgba(255, 255, 255, 1);
+  font-weight: bold;
+  width: 100%;
+  padding: 4px 0;
+}
+
+/* Clickable items styling */
+.clickable-value {
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.clickable-value:hover {
+  color: #ffffff;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+/* Random options panel styling */
+.random-options-panel {
+  background-color: rgba(30, 30, 30, 0.85);
+  border-radius: 8px;
+  padding: 12px 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  left: 20px;
+  bottom: 180px;
+  transition: opacity 0.3s ease;
+  opacity: 0;
+  z-index: 100;
+}
+
+/* Reset view panel styling */
+.reset-view-panel {
+  background-color: rgba(30, 30, 30, 0.85);
+  border-radius: 8px;
+  padding: 12px 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  left: 20px;
+  bottom: 130px;
+  transition: opacity 0.3s ease;
+  opacity: 0;
+  z-index: 100;
+}
+
+/* Panel option styling */
+.panel-option {
+  color: rgba(255, 255, 255, 0.85);
+  padding: 5px 0;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.panel-option:hover {
+  color: #ffffff;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+/* White text variant */
+.white-text {
+  color: rgba(255, 255, 255, 1);
+}

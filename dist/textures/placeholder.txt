@@ -1,0 +1,7 @@
+This directory contains texture files needed for the body customization template.
+Please add the following texture images to this directory:
+- fabric.jpg
+- metal.jpg
+- wood.jpg
+- stone.jpg
+- leather.jpg

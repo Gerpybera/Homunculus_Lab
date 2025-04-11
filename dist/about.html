@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>À propos de Homunculus Lab</title>
+    <link rel="stylesheet" href="./figma component/globals.css">
+    <link rel="stylesheet" href="./figma component/style.css">
+    <link rel="stylesheet" href="./figma component/text-menu.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600&display=swap">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            color: white;
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            overflow: hidden;
+        }
+        
+        #background-video {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: 0;
+            object-fit: cover;
+            filter: brightness(0.4);
+        }
+        
+        .content {
+            position: fixed;
+            z-index: 1;
+            width: 1287px;
+            max-width: 80%;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            margin: 0;
+        }
+        
+        .project-description {
+            color: white;
+            font-size: 1vw;
+            font-family: 'Inter', sans-serif;
+            font-weight: 300;
+            text-align: justify;
+            word-wrap: break-word;
+            margin-top: 0;
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+        
+        .back-button {
+            position: absolute;
+            left: 40px;
+            top: 40px;
+            color: white;
+            font-size: 1.5vw;
+            font-family: 'Inter', sans-serif;
+            font-weight: 300;
+            text-decoration: none;
+            z-index: 10;
+            cursor: pointer;
+            transition: text-shadow 0.3s ease;
+        }
+        .back-button:hover{
+            text-shadow: #fff 0 0 10px;
+        }
+        
+        .start-button {
+            position: absolute;
+            right: 40px;
+            bottom: 40px;
+            color: #818181;
+            font-size: 2vw;
+            font-family: 'Inter', sans-serif;
+            font-weight: 600;
+            text-decoration: none;
+            z-index: 10;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+        
+        .start-button:hover {
+            color: white;
+        }
+        
+        @media (max-width: 1400px) {
+            .content {
+                width: 90%;
+                margin-top: 180px;
+            }
+            
+            .project-title, .project-description {
+                font-size: 20px;
+            }
+            
+            .start-button {
+                font-size: 48px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .content {
+                margin-top: 120px;
+            }
+            
+            .project-title, .project-description {
+                font-size: 18px;
+            }
+            
+            .back-button {
+                font-size: 24px;
+            }
+            
+            .start-button {
+                font-size: 36px;
+                right: 20px;
+                bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <video id="background-video" autoplay muted loop playsinline>
+        <source src="./asset/animation/background.mp4" type="video/mp4">
+    </video>
+
+    <a href="index.html" class="back-button">Retour au menu</a>
+    
+    <div class="content">
+        <p class="project-description"> Homunculus Lab est un projet web interactif qui invite les utilisateurs à créer leur propre personnage à partir de collages d'objets figuratifs et abstraits. En explorant les possibilités infinies de composition, chacun peut façonner un avatar unique, téléchargeable à la fin du processus pour des usages externes.<br/><br/>
+        
+        Ce projet s'inscrit dans une réflexion autour du thème « Hyper », à travers l'exploration de la notion d'hypermétamorphose. Ici, le corps est déconstruit et réinventé uniquement à partir d'éléments qui n'ont aucun lien direct avec l'anatomie humaine. Le résultat : des personnages méconnaissables, étranges et surréalistes, qui traduisent une transformation extrême de l'identité visuelle.<br/><br/>
+        
+        L'utilisateur peut également animer son avatar, renforçant ainsi la dimension vivante et expressive de cette créature digitale. Cette démarche soulève des questions centrales dans l'art numérique : qu'est-ce qu'un avatar ? Peut-il vraiment refléter une identité personnelle, même lorsqu'il s'éloigne radicalement de la figure humaine ?<br/><br/>
+        
+        Inspiré par des œuvres comme Bodies INC de Victoria Vesna, où l'on personnalise un corps virtuel à l'aide de textures, ou encore par l'univers énigmatique de Giorgio De Chirico, avec ses figures construites d'objets incongrus, Homunculus Lab pousse la logique de personnalisation vers une esthétique surréaliste. Chaque choix d'objet devient un acte d'expression personnelle, une manière détournée mais puissante de parler de soi.</p>
+    </div>
+    
+    <a href="application.html" class="start-button">Commencer à éditer</a>
+</body>
+</html>

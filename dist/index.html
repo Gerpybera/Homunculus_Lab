@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homunculus Lab</title>
+    <link rel="stylesheet" href="./figma component/globals.css">
+    <link rel="stylesheet" href="./figma component/style.css">
+    <link rel="stylesheet" href="./figma component/text-menu.css">
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background-color: black;
+            font-family: Arial, sans-serif;
+        }
+        
+        select, button {
+            cursor: pointer;
+        }
+        
+        button:hover {
+            opacity: 0.9;
+        }
+        
+        #background-video {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: 0;
+            object-fit: cover;
+        }
+        
+        #start-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            pointer-events: auto;
+        }
+        
+        .property-group {
+            cursor: pointer;
+            margin-top: 250px;
+        }
+        
+        .label {
+            margin-bottom: 30px;
+        }
+        
+        /* About button styling */
+        #about-button {
+            position: fixed;
+            top: 10%;
+            left: 10%;
+            z-index: 1001;
+            font-family: inherit;
+            background: none;
+            border: none;
+            color: #3F3F3F;
+            font-size: 3,5vw; /* Changed from 16px to 20px */
+            cursor: pointer;
+            opacity: 0.8;
+            transition: color 0.3s ease;
+            text-decoration: none; /* Remove underline from link */
+            direction: ltr; /* Ensure left-to-right text direction */
+            text-align: left; /* Ensure text is aligned left */
+            white-space: nowrap; /* Keep text on one line */
+        }
+        
+        #about-button .text-wrapper {
+            display: inline-block; /* Display as inline block */
+            direction: ltr; /* Ensure left-to-right text direction */
+            font-size: 3.5vw; /* Added explicit font size to text-wrapper */
+            font-weight: lighter; /* Making the font weight lighter */
+            letter-spacing: 1px; /* Adding letter spacing */
+            color: #3F3F3F; /* Set initial color */
+            transition: color 0.3s ease; /* Add smooth transition */
+        }
+        
+        #about-button:hover .text-wrapper {
+            color: white; /* Change color on hover */
+        }
+    </style>
+    <script>
+        // Simple script to handle the start button click
+        document.addEventListener('DOMContentLoaded', function() {
+            const startButton = document.getElementById('startButton');
+            
+            if (startButton) {
+                startButton.addEventListener('click', function() {
+                    // Apply fade out effect
+                    const container = document.getElementById('start-container');
+                    if (container) {
+                        container.style.transition = 'opacity 0.5s ease';
+                        container.style.opacity = '0';
+                        
+                        // Navigate to the application page after fade completes
+                        setTimeout(function() {
+                            window.location.href = 'application.html';
+                        }, 500);
+                    }
+                });
+            }
+        });
+    </script>
+</head>
+<body>
+    <video id="background-video" autoplay muted loop playsinline>
+        <source src="./asset/animation/background.mp4" type="video/mp4">
+    </video>
+    
+    <!-- About button with explicit left-to-right text -->
+    <a id="about-button" class="label" href="about.html" dir="ltr">
+        <div class="text-wrapper" dir="ltr">About</div>
+    </a>
+    
+    <div id="start-container">
+        <div id="mainTitle" class="label">
+            <div class="text-wrapper">Homunculus Lab</div>
+        </div>
+        <script type="importmap">
+            {
+                "imports": {
+                    "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+                    "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+                }
+            }
+        </script>
+        <div id="startMenu" class="start-menu">
+            <div id="startButton" class="property-group">
+                <div class="text-wrapper">CLIQUEZ POUR COMMENCER</div>
+            </div>
+        </div>
+    </div>
+    <!-- No scripts loading here - just the menu -->
+</body>
+</html>

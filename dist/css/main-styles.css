@@ -1,0 +1,436 @@
+/* General UI Elements */
+.loading-indicator {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  border-radius: 10px;
+  z-index: 1000;
+  font-family: 'Inter', sans-serif;
+}
+
+.inline-loading-indicator {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px 15px;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  border-radius: 5px;
+  z-index: 1000;
+}
+
+.transparent-loading {
+  background: rgba(0, 0, 0, 0);
+}
+
+/* Instruction Text Block */
+.instruction-block {
+  position: fixed;
+  left: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #FFF;
+  font-family: Inter, sans-serif;
+  font-size: 1.0vw;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  background: transparent;
+  max-width: 300px;
+  z-index: 100;
+  pointer-events: none; /* Allows clicks to pass through */
+  transition: opacity 0.5s ease;
+}
+
+/* Animation instruction block - shown after rigging */
+.animation-instruction-block {
+  position: fixed;
+  left: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #FFF;
+  font-family: Inter, sans-serif;
+  font-size: 1.0vw;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  background: transparent;
+  max-width: 300px;
+  z-index: 100;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+  opacity: 0; /* Start hidden */
+}
+
+/* Panel Styles */
+.customization-panel {
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: 8px;
+    width: 160px;
+  position: absolute;
+  top: 50%;
+  left: 40px;
+  transform: translateY(-50%);
+  z-index: 10;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.panel-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 0px;
+}
+
+.panel-label {
+  text-align: left;
+  white-space: nowrap;
+  color: rgba(255, 255, 255, 0.85);
+  flex: 1;
+}
+
+.panel-value {
+  text-align: right;
+  white-space: nowrap;
+  color: rgba(255, 255, 255, 1);
+  font-weight: bold;
+  min-width: 60px;
+}
+
+.clickable-value {
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.clickable-value:hover {
+  color: #ffffff;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+.texture-parent {
+  background-color: rgba(0, 0, 0, 0);
+  padding: 0;
+  width: 100%;
+}
+
+/* Type and texture label styles */
+.type, .texture {
+  display: inline-block;
+  margin-right: 5px;
+}
+
+/* Specific styles for the type and texture value divs */
+.div, .div1 {
+  display: inline-block;
+  text-align: right;
+  min-width: 20px;
+}
+
+/* Special styling just for texture name (div class) */
+.div {
+  text-align: left;
+  padding-top: 0; /* Add space above the texture name */
+  padding-bottom: 0; /* Add space below the texture name */
+  margin-left: 35px; /* Add space to the left of the texture name */
+  width: 100%; /* Allow the texture name to use full width */
+  font-weight: bold; /* Make the texture name bold */
+}
+
+/* Special styling just for type number (div1 class) */
+.div1 {
+  text-align: left;
+  padding-top: 0px; /* Add space above the type number */
+  padding-bottom: 0; /* Add space below the type number */
+  margin-left: 0; /* Add space to the left of the type number */
+  width: 100%; /* Allow the type number to use full width */
+  font-weight: bold; /* Make the type number bold */
+}
+
+/* Start Menu Styles */
+.start-menu {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.main-title {
+  margin: 0 0 10px 0;
+  color: white;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.5vw;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0);
+}
+
+/* Format Dialog */
+.format-dialog {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.85);
+  padding: 30px;
+  border-radius: 10px;
+  color: white;
+  z-index: 1000;
+  font-family: 'Inter', sans-serif;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  min-width: 300px;
+  text-align: center;
+}
+
+.format-dialog h3 {
+  margin-bottom: 20px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.export-button {
+  padding: 10px 15px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  flex: 1;
+}
+
+.glb-button {
+  background-color: #3498db;
+}
+
+.fbx-button {
+  background-color: #e67e22;
+}
+
+.cancel-button {
+  background-color: #7f8c8d;
+}
+
+/* Animation Controls */
+.animation-controls {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 15px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 1000;
+  font-family: 'Inter', sans-serif;
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  width: 250px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.dance-button {
+  padding: 8px 12px;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+  margin-bottom: 5px;
+  position: relative;
+  text-align: left;
+  width: 100%;
+  transition: all 0.2s ease;
+  padding-right: 30px;
+}
+
+.dance-button:hover:not(.animation-active) {
+  background-color: #c0392b;
+}
+
+.animation-active {
+  border-left: 4px solid #2ecc71;
+  background-color: rgba(46, 204, 113, 0.3);
+}
+
+.stop-button {
+  padding: 8px 12px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'Inter', sans-serif;
+  margin-top: 10px;
+  font-weight: bold;
+  width: 100%;
+  transition: background-color 0.2s;
+}
+
+.stop-button:hover {
+  background-color: #2980b9;
+}
+
+.no-animations {
+  color: white;
+  padding: 10px 0;
+  text-align: center;
+  font-style: italic;
+}
+
+/* Notification Styles */
+/* These already exist in your custom-panel.css, but I'm adding them here for completeness */
+.notification {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 12px 20px;
+  border-radius: 5px;
+  color: white;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.5vw;
+  z-index: 1100;
+  opacity: 0;
+  animation: fadeInOut 3s ease forwards;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0; transform: translate(-50%, 20px); }
+  15% { opacity: 1; transform: translate(-50%, 0); }
+  85% { opacity: 1; transform: translate(-50%, 0); }
+  100% { opacity: 0; transform: translate(-50%, -20px); }
+}
+
+.notification-info {
+  background-color: #3498db;
+}
+
+.notification-success {
+  background-color: #2ecc71;
+}
+
+.notification-warning {
+  background-color: #f39c12;
+}
+
+.notification-error {
+  background-color: #e74c3c;
+}
+
+/* Body part label styling */
+.body-part-label {
+  position: absolute;
+  padding: 8px 16px;
+  background-color: transparent; /* Background remains transparent */
+  color: white; /* Already white, fully opaque */
+  border-radius: 100px;
+  border: 2px solid #FFFFFF; /* Thicker border with fully opaque white */
+  font-family: 'Inter', sans-serif;
+  font-size: 0.5vw;
+  font-weight: 500; /* Make text slightly bolder */
+  text-align: center;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 10;
+  user-select: none;
+  pointer-events: all;
+  opacity: 1; /* Already fully opaque */
+  text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5); /* Add text shadow for better visibility */
+}
+
+.body-part-label:hover:not(.selected-part) {
+  opacity: 1;
+  border-color: #FFFFFF; /* Ensure fully opaque white on hover */
+  background-color: rgba(255, 255, 255, 0.2); /* Slightly more visible background on hover */
+}
+
+/* Selected body part styling - already fully opaque */
+.body-part-label.selected-part {
+  border-radius: 110px;
+  border: 3px solid #5D00FF;
+  background: #5D00FF;
+  color: #FFFFFF;
+  opacity: 1;
+  transform: scale(1.05) translate(-48%, -48%);
+  box-shadow: 0 0 15px rgba(93, 0, 255, 0.5);
+}
+
+/* Simple randomize button with specified styling */
+.simple-randomize-button {
+  position: absolute;
+  bottom: 5%;
+  left: 5%;
+  color: #3F3F3F;
+  font-family: 'Inter', sans-serif;
+  font-size: 5vw; /* Adjusted font size for better visibility */
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  cursor: pointer;
+  transition: color 0.3s ease, opacity 0.3s ease; /* Added opacity transition */
+  z-index: 100;
+  user-select: none;
+}
+
+.simple-randomize-button:hover {
+  color: #FFFFFF;
+}
+
+/* Continue button styling (for rigging) */
+.simple-continue-button {
+  position: absolute;
+  bottom: 5%;
+  right: 5%; /* 5% offset from right edge */
+  color: #3F3F3F;
+  font-family: 'Inter', sans-serif;
+  font-size: 5vw; /* Adjusted font size for better visibility */
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  cursor: pointer;
+  transition: color 0.3s ease, opacity 0.3s ease;
+  z-index: 100;
+  user-select: none;
+  text-align: right;
+}
+
+.simple-continue-button:hover {
+  color: #FFFFFF;
+}
+
+/* Export button styling (similar styling but positioned below continue button) */
+.simple-export-button {
+  position: absolute;
+  bottom: 5%; /* Position below the continue button */
+  right: 5%;
+  color: #3F3F3F;
+  font-family: 'Inter', sans-serif;
+  font-size: 5vw; /* Adjusted font size for better visibility */
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  z-index: 100;
+  user-select: none;
+  text-align: right;
+}
+
+.simple-export-button:hover {
+  color: #FFFFFF;
+}
