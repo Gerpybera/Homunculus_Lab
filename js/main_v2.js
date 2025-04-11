@@ -193,9 +193,9 @@ let isArmatureVisible = false;
 
 // Predefined dance animations (with correct file paths)
 const danceAnimations = [
-  { name: "Danse 1", path: "../asset/body rig/dances/dance2.fbx" }, // Fixed order - name matches position
-  { name: "Danse 2", path: "../asset/body rig/dances/dance1.fbx" }, // Fixed order - name matches position
-  { name: "Danse 3", path: "../asset/body rig/dances/dance3.fbx" },
+  { name: "Danse 1", path: "asset/body rig/dances/dance2.fbx" }, // Fixed order - name matches position
+  { name: "Danse 2", path: "asset/body rig/dances/dance1.fbx" }, // Fixed order - name matches position
+  { name: "Danse 3", path: "asset/body rig/dances/dance3.fbx" },
 ];
 
 // Add armature name mapping to handle node name mismatches
@@ -476,55 +476,55 @@ const bodyParts = {
     position: new THREE.Vector3(0, 0, 0),
     uiPosition: new THREE.Vector3(0, 2, 0), // Position for the head UI button
     radius: 0.5,
-    modelPath: "../asset/models/head.glb",
+    modelPath: "asset/models/head.glb",
     type: 0, // Changed from 1 to 0 to represent default model
     typeCount: 10,
-    baseModelPath: "../asset/models/types/",
+    baseModelPath: "asset/models/types/",
   },
   torso: {
     position: new THREE.Vector3(0, 0, 0),
     uiPosition: new THREE.Vector3(0, 1.3, 0), // Position for the torso UI button
     radius: 0.8,
-    modelPath: "../asset/models/torso.glb",
+    modelPath: "asset/models/torso.glb",
     type: 0, // Changed from 1 to 0 to represent default model
     typeCount: 10,
-    baseModelPath: "../asset/models/types/",
+    baseModelPath: "asset/models/types/",
   },
   leftArm: {
     position: new THREE.Vector3(0, 0, 0),
     uiPosition: new THREE.Vector3(-0.5, 1.5, 0), // Position for the left arm UI button
     radius: 0.3,
-    modelPath: "../asset/models/left_arm.glb",
+    modelPath: "asset/models/left_arm.glb",
     type: 0, // Changed from 1 to 0 to represent default model
     typeCount: 10,
-    baseModelPath: "../asset/models/types/",
+    baseModelPath: "asset/models/types/",
   },
   rightArm: {
     position: new THREE.Vector3(0, 0, 0),
     uiPosition: new THREE.Vector3(0.5, 1.5, 0), // Position for the right arm UI button
     radius: 0.3,
-    modelPath: "../asset/models/right_arm.glb",
+    modelPath: "asset/models/right_arm.glb",
     type: 0, // Changed from 1 to 0 to represent default model
     typeCount: 10,
-    baseModelPath: "../asset/models/types/",
+    baseModelPath: "asset/models/types/",
   },
   leftLeg: {
     position: new THREE.Vector3(0, 0, 0),
     uiPosition: new THREE.Vector3(-0.3, 0.5, 0), // Position for the left leg UI button
     radius: 0.4,
-    modelPath: "../asset/models/left_leg.glb",
+    modelPath: "asset/models/left_leg.glb",
     type: 0, // Changed from 1 to 0 to represent default model
     typeCount: 10,
-    baseModelPath: "../asset/models/types/",
+    baseModelPath: "asset/models/types/",
   },
   rightLeg: {
     position: new THREE.Vector3(0, 0, 0),
     uiPosition: new THREE.Vector3(0.3, 0.5, 0), // Position for the right leg UI button
     radius: 0.4,
-    modelPath: "../asset/models/right_leg.glb",
+    modelPath: "asset/models/right_leg.glb",
     type: 0, // Changed from 1 to 0 to represent default model
     typeCount: 10,
-    baseModelPath: "../asset/models/types/",
+    baseModelPath: "asset/models/types/",
   },
 };
 
@@ -1211,10 +1211,10 @@ function showCustomizationPanel(partName) {
 
   function createAndShowPanels() {
     // Add the custom CSS file if not already added
-    if (!document.querySelector('link[href="../css/custom-panel.css"]')) {
+    if (!document.querySelector('link[href="css/custom-panel.css"]')) {
       const link = document.createElement("link");
       link.rel = "stylesheet";
-      link.href = "../css/custom-panel.css";
+      link.href = "css/custom-panel.css";
       document.head.appendChild(link);
     }
 
@@ -2149,7 +2149,7 @@ function loadReferenceArmature() {
   return new Promise((resolve, reject) => {
     const fbxLoader = new FBXLoader();
     fbxLoader.load(
-      "../asset/body rig/armature_reference.fbx",
+      "asset/body rig/armature_reference.fbx",
       (reference) => {
         console.log("Reference armature loaded successfully");
 
@@ -2765,7 +2765,7 @@ function loadArmature() {
   document.body.appendChild(loadingDiv);
 
   const fbxLoader = new FBXLoader();
-  const armaturePath = "../asset/body rig/armature.fbx";
+  const armaturePath = "asset/body rig/armature.fbx";
 
   fbxLoader.load(
     armaturePath,
