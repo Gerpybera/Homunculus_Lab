@@ -25,14 +25,17 @@
         
         #background-video {
             position: fixed;
-            right: 0;
-            bottom: 0;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
             min-width: 100%;
             min-height: 100%;
             width: auto;
             height: auto;
             z-index: 0;
             object-fit: cover;
+            object-position: center;
+            transition: width 0.3s ease, height 0.3s ease;
         }
         
         #start-container {
@@ -96,6 +99,32 @@
         // Simple script to handle the start button click
         document.addEventListener('DOMContentLoaded', function() {
             const startButton = document.getElementById('startButton');
+            const backgroundVideo = document.getElementById('background-video');
+            
+            // Function to adjust video size
+            function adjustVideoSize() {
+                const windowAspect = window.innerWidth / window.innerHeight;
+                const videoElement = document.getElementById('background-video');
+                
+                if (videoElement) {
+                    // Ensure video covers the entire viewport
+                    if (windowAspect > videoElement.videoWidth / videoElement.videoHeight) {
+                        videoElement.style.width = '100%';
+                        videoElement.style.height = 'auto';
+                    } else {
+                        videoElement.style.width = 'auto';
+                        videoElement.style.height = '100%';
+                    }
+                }
+            }
+            
+            // Add resize event listener
+            window.addEventListener('resize', adjustVideoSize);
+            
+            // Call once on load when video metadata is loaded
+            if (backgroundVideo) {
+                backgroundVideo.addEventListener('loadedmetadata', adjustVideoSize);
+            }
             
             if (startButton) {
                 startButton.addEventListener('click', function() {
