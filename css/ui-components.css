@@ -88,7 +88,7 @@
     z-index: 10;
 }
 
-/* Button styles */
+/* Button styles sans Geist */
 .button-base {
     padding: 5% 15px;
     color: white;
@@ -96,7 +96,7 @@
     border-radius: 5px;
     cursor: pointer;
     font-weight: bold;
-    font-family: "Geist Mono";
+    font-family: 'Inter', sans-serif;
 }
 /* Text styles for panels */
 .panel-title {
