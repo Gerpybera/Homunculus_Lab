@@ -8,7 +8,7 @@
   text-align: left;
   font-size: 64px;
   color: #ffffff;
-  font-family: "Geist Mono";
+  font-family: 'Inter', sans-serif; /* sans Geist */
   border-radius: 10px;
 }
 
