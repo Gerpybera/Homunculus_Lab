@@ -1170,7 +1170,7 @@ function createAnimationInstructionBlock() {
   animationInstructionBlock.id = "animationInstructionBlock";
   animationInstructionBlock.className = "animation-instruction-block";
   animationInstructionBlock.textContent =
-    "Choisissez une animation pour votre personnage";
+    "Choisissez une animation pour votre personnage.";
 
   document.body.appendChild(animationInstructionBlock);
 
